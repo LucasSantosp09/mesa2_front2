@@ -2,11 +2,12 @@
 <html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
-	<title>jokenpô</title>
+	<title>Aula 8 - Refatorando códigos anteriores </title>
 </head>
 <body>
-	<h1>JS - Jokenpô</h1>
+	<h1>Aula 8 -Refatorando códigos anteriores </h1>
 	<h3>Jogador:</h3>
+	<!--Criar o fórmulário para o jogador escolher-->
 	<img src="pedra.png" alt="Pedra">
 	<img src="papel.png" alt="Papel">
 	<img src="tesoura.png" alt="Tesoura">
@@ -15,15 +16,19 @@
 		<input type="radio" name="grupo" id="papel">Papel
 		<input type="radio" name="grupo" id="tesoura">Tesoura
 		<p>
+			<!-- Botão para jogar ou apagar -->
 			<input type="button" value=" JOGAR " onclick="jogar()">
 			<input type="reset" value=" RESET " onclick="resetar()">
 		</p>
 	</form>
 	<hr>
+	<!--Mostra a imagem do computador-->
 	<h3>Computador:</h3>
 	<img src="pc.png" alt="PC" id="pc">
 	<hr>
+	<!--Mostra o resultado-->
 	<h3 id="placar"></h3>
+	<!--Script que contém a lógica do jogo-->
 <script src="jokenpo.js"></script>
 </body>
 </html>

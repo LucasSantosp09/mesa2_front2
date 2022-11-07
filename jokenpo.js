@@ -1,13 +1,10 @@
-/**
-* JS - Aula12 Jokenpô
-* @author Professor José de Assis
-*/
-
 function jogar(){
+
+	//Verificar se o usuário preencheu algum item
 	if(document.getElementById("pedra").checked == false && document.getElementById("papel").checked == false && document.getElementById("tesoura").checked == false){
 		alert("Selecione uma opção");
 	} else{
-		//lógica principal
+		//faz o sorteio do item do computador
 		var sorteio = Math.floor(Math.random() * 3);
 		switch(sorteio){
 			case 0:
@@ -21,16 +18,20 @@ function jogar(){
 				break;
 		}
 		//verificar o vencedor ou declarar empate
-		if ((document.getElementById("pedra").checked == true && sorteio == 0) || (document.getElementById("papel").checked == true && sorteio == 1) || (document.getElementById("tesoura").checked == true && sorteio == 2)){
+		if ((document.getElementById("pedra").checked == true && sorteio == 0) || 
+		(document.getElementById("papel").checked == true && sorteio == 1) || 
+		(document.getElementById("tesoura").checked == true && sorteio == 2)){
 			document.getElementById("placar").innerHTML="Empate";
-		} else if ((document.getElementById("pedra").checked == true && sorteio == 2) || (document.getElementById("papel").checked == true && sorteio == 0) || (document.getElementById("tesoura").checked == true && sorteio == 1)){
+		} else if ((document.getElementById("pedra").checked == true && sorteio == 2) || 
+		(document.getElementById("papel").checked == true && sorteio == 0) || 
+		(document.getElementById("tesoura").checked == true && sorteio == 1)){
 			document.getElementById("placar").innerHTML="Jogador Venceu";
 		} else {
 			document.getElementById("placar").innerHTML="Computador Venceu";
 		}
 	} 
 }
-
+//Limpa os dados
 function resetar(){
 	document.getElementById("pc").src="pc.png";
 	document.getElementById("placar").innerHTML="";
